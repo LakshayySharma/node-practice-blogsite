@@ -2,10 +2,12 @@ const { urlencoded } = require("express");
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const cors = require("cors");
 const userRouter = require("./routes/userRoutes");
 const connection = require("./db");
 require("dotenv").config();
 
+app.use(cors());
 app.use(express.json(urlencoded({ extended: true })));
 
 connection();
