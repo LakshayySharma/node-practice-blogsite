@@ -51,7 +51,7 @@ exports.signUpUser = async (req, res, next) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: error.message,
+      error: "Please enter all fields",
     });
   }
 };
